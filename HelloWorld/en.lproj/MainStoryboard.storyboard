@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Hello World View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="HelloWorldViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNS-oc-cQi">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="changeGreetingOnLeave:" destination="2" eventType="editingDidEnd" id="7Go-yW-q4L"/>
+                                    <outlet property="delegate" destination="2" id="PMk-Yt-6Cg"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hello, World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf8-W8-azg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="Xbj-1D-QBU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9n-RC-joq">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Hello">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeGreeting:" destination="2" eventType="touchUpInside" id="oVQ-V6-AGl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51486343989041261" green="0.4406167526316449" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yf8-W8-azg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="189" id="78K-SE-vRh"/>
+                            <constraint firstItem="LNS-oc-cQi" firstAttribute="centerX" secondItem="yf8-W8-azg" secondAttribute="centerX" type="default" id="98j-hz-0yj"/>
+                            <constraint firstItem="H9n-RC-joq" firstAttribute="trailing" secondItem="yf8-W8-azg" secondAttribute="trailing" type="default" id="HYU-tK-Ky0"/>
+                            <constraint firstAttribute="bottom" secondItem="H9n-RC-joq" secondAttribute="bottom" constant="85" id="RMS-J6-KjE"/>
+                            <constraint firstAttribute="trailing" secondItem="LNS-oc-cQi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gK5-xh-rXz"/>
+                            <constraint firstItem="H9n-RC-joq" firstAttribute="leading" secondItem="yf8-W8-azg" secondAttribute="leading" type="default" id="mbv-DK-5uE"/>
+                            <constraint firstItem="LNS-oc-cQi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="p5N-rh-StV"/>
+                            <constraint firstItem="LNS-oc-cQi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="x78-Rs-e4E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelName" destination="yf8-W8-azg" id="DDA-RL-K6j"/>
+                        <outlet property="textName" destination="LNS-oc-cQi" id="q56-7D-csG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
